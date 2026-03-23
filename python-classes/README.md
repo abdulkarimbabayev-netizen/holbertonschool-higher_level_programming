@@ -1,49 +1,23 @@
 # Python - Classes and Objects
 
-This project is part of the Higher Level Programming curriculum at Holberton School.
-It introduces the concept of Object-Oriented Programming (OOP) in Python.
+This project introduces the basics of Object-Oriented Programming in Python.
 
-## Learning Objectives
-
-- What is OOP
-- “First-class everything”
+## Concepts Covered
 - What is a class
 - What is an object and an instance
-- The difference between a class and an object or instance
-- What is an attribute
-- How to use public, protected, and private attributes
-- What is `self`
-- What is a method
-- The special `__init__` method
-- Data encapsulation
-- Data abstraction
-- Properties vs getters/setters
-- How to write a class in Python
-- How to create an instance
-- How to work with attributes
+- Attributes and methods
+- The difference between class attributes and instance attributes
+- Private attributes and name mangling (`__attribute`)
+- Encapsulation and data validation in object design
+- Using `__init__` for instance initialization
 
-## Requirements
+## Tasks Overview
+- **0-square.py**: Defines an empty `Square` class
+- **1-square.py**: Adds a private attribute `__size`
+- **2-square.py**: Adds size validation in the constructor
+- More tasks build on this foundation
 
-- Allowed editors: vi, vim, emacs
-- Files run on Ubuntu 20.04 using Python 3.8.5
-- Files must end with a new line
-- Code follows PEP8 style
-- No module imports allowed
-- All files must be executable
-
-## Project Structure
-
-python-classes/
-├── 0-square.py
-├── 1-square.py
-├── 2-square.py
-├── 3-square.py
-├── 4-square.py
-├── 5-square.py
-├── 6-square.py
-
-## Author
-
-Babayev Abdulkarim Farman
-Holberton School
-
+All files follow:
+- Python 3
+- PEP8 / pycodestyle conventions
+- Must begin with `#!/usr/bin/python3`
