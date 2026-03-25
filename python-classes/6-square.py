@@ -11,10 +11,6 @@ class Square:
         Args:
             size: The size of the square (default is 0).
             position: The position of the square as a tuple (default is (0, 0)).
-
-        Raises:
-            TypeError: If size is not an integer or position is invalid.
-            ValueError: If size is less than 0.
         """
         self.size = size
         self.position = position
@@ -64,13 +60,14 @@ class Square:
         Raises:
             TypeError: If value is not a tuple of 2 positive integers.
         """
-        if not isinstance(value, tuple) or len(value) != 2:
-            raise TypeError("position must be a tuple of 2 positive integers")
-        if type(value[0]) is bool or type(value[1]) is bool:
-            raise TypeError("position must be a tuple of 2 positive integers")
-        if not isinstance(value[0], int) or not isinstance(value[1], int):
-            raise TypeError("position must be a tuple of 2 positive integers")
-        if value[0] < 0 or value[1] < 0:
+        if (not isinstance(value, tuple) or 
+            len(value) != 2 or
+            type(value[0]) is bool or
+            type(value[1]) is bool or
+            not isinstance(value[0], int) or
+            not isinstance(value[1], int) or
+            value[0] < 0 or
+            value[1] < 0):
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
 
