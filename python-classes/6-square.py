@@ -39,7 +39,7 @@ class Square:
             TypeError: If value is not an integer.
             ValueError: If value is less than 0.
         """
-        if not isinstance(value, int):
+        if type(value) is bool or not isinstance(value, int):
             raise TypeError("size must be an integer")
         if value < 0:
             raise ValueError("size must be >= 0")
@@ -64,13 +64,15 @@ class Square:
         Raises:
             TypeError: If value is not a tuple of 2 positive integers.
         """
-        if isinstance(value, tuple) and len(value) == 2:
-            if all(isinstance(num, int) and num >= 0 for num in value):
-                self.__position = value
-            else:
-                raise TypeError("position must be a tuple of 2 positive integers")
-        else:
+        if not isinstance(value, tuple) or len(value) != 2:
             raise TypeError("position must be a tuple of 2 positive integers")
+        if type(value[0]) is bool or type(value[1]) is bool:
+            raise TypeError("position must be a tuple of 2 positive integers")
+        if not isinstance(value[0], int) or not isinstance(value[1], int):
+            raise TypeError("position must be a tuple of 2 positive integers")
+        if value[0] < 0 or value[1] < 0:
+            raise TypeError("position must be a tuple of 2 positive integers")
+        self.__position = value
 
     def area(self):
         """Return the current square area.
